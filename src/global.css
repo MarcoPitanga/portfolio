@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Anurati;
+  src: url("Anurati-Regular.otf");
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url("Archivo-VariableFont.ttf");
+}
+
+body {
+  background-color: #202020;
+  font-family: "Archivo";
+  color: #fff9;
+}
