@@ -33,6 +33,7 @@
 }
 
 .section {
+  max-height: 90vh;
   padding: 72px 0px;
   height: 90vh;
   display: flex;
