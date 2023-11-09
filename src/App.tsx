@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-import "./App.css";
 import { SocialIcon } from "react-social-icons";
+import Navbar from "./components/Navbar";
+import Section from "./components/Section";
 
 const App = () => {
   const [selectedTecnology, setSelectedTecnology] = useState("");
@@ -87,50 +88,11 @@ const App = () => {
     { titulo: "figma", descricao: "descrição figma" },
   ];
 
-  const handleSelectedTecnology = (tecnology: string) => {
-    setSelectedTecnology(tecnology);
-  };
-
-  const handleMenuItemClick = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="h-screen scrollbar">
-      <header className="fixed z-10 flex justify-around items-center text-5xl w-full h-20 bg-background3/80 border-b-2 border-background3 ">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <h2 className="ml-3 text-4xl text-primary font-[Anurati]">MARCO</h2>
-          <menu className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a
-              className="text-lg mr-6 transition duration-300 ease-in-out hover:text-white text-[#bbbbbb] cursor-pointer"
-              onClick={() => handleMenuItemClick("Início")}
-            >
-              Início
-            </a>
-            <a
-              className="text-lg mr-6 transition duration-300 ease-in-out hover:text-white text-[#bbbbbb] cursor-pointer"
-              onClick={() => handleMenuItemClick("Sobre mim")}
-            >
-              Sobre mim
-            </a>
-            <a
-              className="text-lg mr-5 transition duration-300 ease-in-out hover:text-white text-[#bbbbbb] cursor-pointer"
-              onClick={() => handleMenuItemClick("Conhecimentos")}
-            >
-              Conhecimentos
-            </a>
-            <a
-              className="text-lg mr-5 transition duration-300 ease-in-out hover:text-white text-[#bbbbbb] cursor-pointer"
-              onClick={() => handleMenuItemClick("Projetos")}
-            >
-              Projetos
-            </a>
-          </menu>
-        </div>
-      </header>
+      <Navbar items={["Início", "Sobre mim", "Conhecimentos", "Projetos"]} />
 
-      <section id="Início" className="section bg-background2 pt-20">
+      <Section name="Início" className="bg-background2">
         <main className="w-full h-screen">
           <div className="w-full h-full flex flex-col-reverse items-center justify-between md:grid md:grid-cols-2 px-5 md:px-48">
             <div className="py-5">
@@ -146,9 +108,9 @@ const App = () => {
             </aside>
           </div>
         </main>
-      </section>
+      </Section>
 
-      <section id="Sobre mim" className="section bg-background">
+      <Section name="Sobre mim" className="bg-background">
         <div className="flex justify-between items-center p-6  border-2 border-gray-800 bg-background3 md:grid md:grid-cols-2 max-w-[1140px] my-0 mx-auto">
           <div className="flex justify-center items-center h-[500px]">
             <div className="h-[300px] w-[300px] bg-primary rounded-full flex justify-center items-center uppercase text-9xl text-gray-950 font-[Anurati]">
@@ -246,9 +208,9 @@ const App = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section id="Conhecimentos" className="section bg-background2">
+      <Section name="Conhecimentos" className="bg-background2">
         <div className="flex justify-between items-center p-6 md:grid md:grid-cols-2 max-w-[1140px] my-0 mx-auto gap-5">
           <div className="flex flex-col w-[500px] h-[500px] max-w-[500px] mr-10">
             <h3 className="font-semibold text-4xl mb-4 text-white">Conhecimentos</h3>
@@ -261,8 +223,8 @@ const App = () => {
               <div
                 key={index}
                 tabIndex={1}
-                onMouseEnter={() => handleSelectedTecnology(tecnologia.descricao)}
-                onMouseLeave={() => handleSelectedTecnology("")}
+                onMouseEnter={() => setSelectedTecnology(tecnologia.descricao)}
+                onMouseLeave={() => setSelectedTecnology("")}
                 role="button"
                 className="border border-background hover:border-primary duration-500 rounded-xl bg-background3/25 flex justify-center items-center"
               >
@@ -271,9 +233,9 @@ const App = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section id="Projetos" className="section bg-background">
+      <Section name="Projetos" className="bg-background">
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-white font-semibold text-4xl mb-20">Projetos</h2>
           <div className="h-full grid grid-cols-4 gap-4 scrollbar max-h-[60vh] p-4">
@@ -293,7 +255,6 @@ const App = () => {
                     site
                   </div>
                   <SocialIcon
-                    data-tooltip-id="github"
                     network="github"
                     fgColor="#64ffda"
                     bgColor="#0a192f"
@@ -306,7 +267,7 @@ const App = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 };

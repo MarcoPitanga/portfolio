@@ -26,3 +26,28 @@ body {
   @apply scrollbar-thumb-rounded-full;
   @apply scrollbar-track-rounded-full;
 }
+
+.aside-main {
+  -webkit-animation: slide 2s ease-in-out infinite alternate;
+  animation: slide 2s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
