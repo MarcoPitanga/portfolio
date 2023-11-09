@@ -17,3 +17,12 @@ body {
   font-family: "Archivo";
   color: #fff9;
 }
+
+.scrollbar {
+  @apply scrollbar-thin;
+  @apply scrollbar-thumb-primary;
+  @apply scrollbar-track-background3;
+  @apply overflow-y-auto;
+  @apply scrollbar-thumb-rounded-full;
+  @apply scrollbar-track-rounded-full;
+}
