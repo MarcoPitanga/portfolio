@@ -9,6 +9,9 @@ export default {
         background2: "#081020",
         background3: "#030712",
       },
+      backgroundImage: {
+        texture: "url('http://web-features.net/patterns/14.png')",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
