@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: Anurati;
-  src: url("Anurati-Regular.otf");
+  src: url("./fonts/Anurati-Regular.otf");
 }
 
 @font-face {
   font-family: Archivo;
-  src: url("Archivo-VariableFont.ttf");
+  src: url("./fonts/Archivo-VariableFont.ttf");
 }
 
 body {
