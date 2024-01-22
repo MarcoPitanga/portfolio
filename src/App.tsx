@@ -22,7 +22,7 @@ const App = () => {
               <h3 className="text-2xl mb-2 text-primary">Olá, meu nome é</h3>
               <h2 className="text-6xl mb-6 text-white/90 font-bold">Marco Pitanga.</h2>
               <p className="text-4xl text-white/60 font-medium">
-                Sou um desenvolvedor especializado em desenvolver aplicações Web.
+                Sou um desenvolvedor especializado em aplicações Web.
               </p>
             </div>
 
