@@ -40,15 +40,16 @@ const App = () => {
               <p>mp</p>
             </div>
           </div>
-          <div className="py-5 h-full grid grid-rows-5">
+          <div className="h-full grid grid-rows-5">
             <div className="row-span-1"></div>
             <div className="row-span-3">
               <h2 className="text-4xl mb-3 text-white">Marco Pitanga</h2>
               <h3 className="text-xl mb-6 text-primary">Desenvolvedor Web</h3>
               <p className="text-xl text-justify">
-                Sou estudante de Ciência da Computação, focado em Desenvolvimento Web há 3 anos.
-                Profissionalmente tenho experiência com estagio full-stack, contribuindo para o
-                desenvolvimento de uma plataforma interna de gestão para um estúdio criativo.
+                Recém-formado em Ciência da Computação, com 3 anos de foco em Desenvolvimento Web.
+                Contribuí como estagiário full-stack para o desenvolvimento de uma plataforma
+                interna de gestão em um estúdio criativo. Agora, estou buscando oportunidades para
+                aplicar e expandir minhas habilidades no desenvolvimento web.
               </p>
             </div>
 
