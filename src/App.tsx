@@ -143,8 +143,8 @@ const App = () => {
             </h4>
           </div>
           <div className="h-full grid grid-cols-4 gap-4">
-            {technologies.map((tech, i) => (
-              <CardTechnology tech={tech} index={i} setSelectedTechnology={setSelectedTechnology}>
+            {technologies.map((tech, index) => (
+              <CardTechnology tech={tech} key={index} setSelectedTechnology={setSelectedTechnology}>
                 <img src={`logo-${tech.name}.svg`} width={75} />
               </CardTechnology>
             ))}
@@ -157,7 +157,7 @@ const App = () => {
           <h2 className="text-white font-semibold text-4xl mb-20">Projetos</h2>
           <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto py-10">
             {projects.map((project, index) => (
-              <ProjectCard index={index} project={project} />
+              <ProjectCard key={index} project={project} />
             ))}
           </div>
         </div>

@@ -2,13 +2,12 @@ import { project } from "../data/projects";
 import { SocialIcon } from "react-social-icons";
 
 interface ProjectCardProps {
-  index: number;
   project: project;
 }
 
-export default function ProjectCard({ index, project }: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div key={index} className="card relative bg-background3 rounded-lg shadow-lg">
+    <div className="card relative bg-background3 rounded-lg shadow-lg">
       <div className="w-full h-full face face1 p-5">
         <div className="content">
           <div className="h-20 flex justify-around items-center">
