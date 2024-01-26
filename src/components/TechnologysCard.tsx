@@ -18,7 +18,7 @@ export default function TechnologysCard({
       onMouseEnter={() => setSelectedTechnology(tech.description)}
       onMouseLeave={() => setSelectedTechnology("")}
       role="button"
-      className="border border-background hover:border-primary duration-500 rounded-xl bg-background3/25 flex justify-center items-center"
+      className="border border-background hover:border-primary duration-500 rounded-xl bg-background3/25 flex justify-center items-center w-32 h-40 md:p-0"
     >
       {children}
     </div>

@@ -17,16 +17,20 @@ const App = () => {
 
       <Section name="Início" className="bg-background2 bg-texture bg-fixed">
         <main className="w-full h-screen">
-          <div className="w-full h-full flex flex-col-reverse items-center justify-between md:grid md:grid-cols-2 px-5 md:px-48">
+          <div className="w-full h-full flex flex-col-reverse items-center justify-between lg:grid lg:grid-cols-2 px-5 lg:px-48">
             <div className="py-5">
-              <h3 className="text-2xl mb-2 text-primary">Olá, meu nome é</h3>
-              <h2 className="text-6xl mb-6 text-white/90 font-bold">Marco Pitanga.</h2>
-              <p className="text-4xl text-white/60 font-medium">
+              <h3 className="text-2xl mb-2 text-primary text-center lg:text-start">
+                Olá, meu nome é
+              </h3>
+              <h2 className="text-6xl mb-6 text-white/90 font-bold text-center lg:text-start">
+                Marco Pitanga.
+              </h2>
+              <p className="text-4xl text-white/60 font-medium text-center lg:text-start">
                 Sou um desenvolvedor especializado em aplicações Web.
               </p>
             </div>
 
-            <aside className="w-full h-full flex flex-col items-end justify-center">
+            <aside className="w-full h-full flex flex-col items-center lg:items-end justify-center">
               <img src="aside-main.png" className="aside-main" />
             </aside>
           </div>
@@ -134,15 +138,15 @@ const App = () => {
         </div>
       </Section>
 
-      <Section name="Conhecimentos" className="bg-background">
-        <div className="flex justify-between items-center p-6 md:grid md:grid-cols-2 max-w-[1140px] my-0 mx-auto gap-5">
-          <div className="flex flex-col w-[500px] h-[500px] max-w-[500px] mr-10">
-            <h3 className="font-semibold text-4xl mb-4 text-white">Conhecimentos</h3>
-            <h4 className="font-semibold text-lg text-justify">
+      <Section name="Conhecimentos" className="bg-background h-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-center p-6 lg:grid lg:grid-cols-2 max-w-[1140px] my-0 mx-auto gap-5">
+          <div className="flex flex-col lg:w-[500px] lg:h-[500px] lg:max-w-[500px] lg:mr-10">
+            <h3 className="font-semibold text-4xl mb-10 md:mb-4 text-white">Conhecimentos</h3>
+            <h4 className="font-semibold text-lg text-justify hidden lg:block">
               {selectedTechnology || "Passe o mouse sobre um card para ler"}
             </h4>
           </div>
-          <div className="h-full grid grid-cols-4 gap-4">
+          <div className="h-full grid grid-cols-2 md:grid-cols-4 gap-5 mx-auto">
             {technologies.map((tech, index) => (
               <CardTechnology tech={tech} key={index} setSelectedTechnology={setSelectedTechnology}>
                 <img src={`logo-${tech.name}.svg`} width={75} />
