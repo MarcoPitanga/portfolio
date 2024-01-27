@@ -16,7 +16,7 @@ const App = () => {
       <Navbar items={["Início", "Sobre mim", "Conhecimentos", "Projetos"]} />
 
       <Section name="Início" className="bg-background2 bg-texture bg-fixed h-auto">
-        <main className="w-full h-screen">
+        <main className="w-full h-screen mt-20 md:mt-0">
           <div className="w-full h-full flex flex-col-reverse items-center justify-between lg:grid lg:grid-cols-2 px-5 lg:px-48">
             <div className="py-5 hidden md:block">
               <h3 className="text-2xl mb-2 text-primary text-center lg:text-start">
