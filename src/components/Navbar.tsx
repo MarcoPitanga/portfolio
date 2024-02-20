@@ -14,7 +14,7 @@ export default function Navbar({ items }: NavbarProps) {
   };
 
   return (
-    <nav className="fixed z-10 flex flex-wrap mx-auto justify-between items-center text-5xl w-full p-5 bg-background3/80 border-b-2 border-background3">
+    <nav className="fixed z-20 flex flex-wrap mx-auto justify-between items-center text-5xl w-full p-5 bg-background3/80 border-b-2 border-background3">
       <h2 className="ml-3 text-4xl text-primary font-[Anurati]">MARCO</h2>
       <menu className="hidden md:flex flex-wrap items-center text-base justify-center">
         {items.map((item, index) => (
